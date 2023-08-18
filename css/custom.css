@@ -1,3 +1,12 @@
 body{background-image:url(../images/patterns/pt30.png);
     background-repeat:repeat;}
 
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+    }
+    .gallery img {
+        max-width: 200px;
+        max-height: 200px;
+    }
