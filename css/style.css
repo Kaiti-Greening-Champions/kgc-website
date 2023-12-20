@@ -532,10 +532,10 @@ label {
 	background:rgba(0,0,0,.6);
 }
 .checkers-overlay{
-	background:url(../images/checkers.png) repeat;
+	background:url(../images/checkers.webp) repeat;
 }
 .pattern-overlay{
-	background:url(../images/pattern.png) repeat;
+	background:url(../images/pattern.webp) repeat;
 }
 .next-prev-nav{
 	display:inline-block;
@@ -1782,7 +1782,7 @@ body.boxed .is-sticky .full-width-menu{
 	opacity:0;
 }
 .lead-block{
-	background:url(../images/wave-high.png) repeat-x #fafafa;
+	background:url(../images/wave-high.webp) repeat-x #fafafa;
 	border-bottom:#e8e8e8 1px solid;
 	padding:50px 0;
 }
@@ -1961,7 +1961,7 @@ body.boxed .is-sticky .full-width-menu{
 .our-partners{
 	border-top:#e8e8e8 1px solid;
 	padding:40px 0;
-	background-image:url(../images/wave-high.png);
+	background-image:url(../images/wave-high.webp);
 	background-repeat: repeat-x;
 	background-color:#fafafa;
 }
@@ -1987,7 +1987,7 @@ body.boxed .is-sticky .full-width-menu{
 	color:#fff;
 }
 .site-top-footer{
-	background-image:url(../images/wave-high.png);
+	background-image:url(../images/wave-high.webp);
 	background-repeat: repeat-x;
 	background-color:#2f2f2f;
 	padding:40px 0;
@@ -2040,7 +2040,7 @@ body.boxed .is-sticky .full-width-menu{
 }
 .secondary-bar{
 	padding:20px 0;
-	background:url(../images/wave-high.png) repeat-x #fafafa;
+	background:url(../images/wave-high.webp) repeat-x #fafafa;
 	border-bottom:#e8e8e8 1px solid;
 }
 .secondary-bar .flexslider .flex-prev, .secondary-bar .flexslider .flex-next{
