@@ -83,6 +83,7 @@ html, hmtl a{
 	font-size: 100%; 
 	-webkit-text-size-adjust: 100%; 
 	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 a{
 	color:#555555;
