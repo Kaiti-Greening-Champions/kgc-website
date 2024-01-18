@@ -1131,14 +1131,14 @@ body.boxed .body .lower-header{
 	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);
 			box-shadow:0 1px 2px rgba(0,0,0,.1);
 }
-h1.logo{
-	padding:0;
-	padding-top:0;
-	margin:0;
-	width:70px;
-	height:70px;
-	float:left;
+h1.logo {
+    width: 100px; /* Uniform width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0;
+    margin: 0;
+    float: left; /* Optional, depending on desired layout */
 }
+
 .for-navi .col-md-8{
 	position:inherit!important;
 }
@@ -1926,10 +1926,16 @@ body.boxed .is-sticky .full-width-menu{
 	background-repeat: repeat-x;
 	background-color:#fafafa;
 }
-.partner-logos{
-	margin:0;
-	list-style-type:none;
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
+
 .partner-logos li{
 	display:inline-block;
 	margin:28px 26px 0;
@@ -2804,17 +2810,26 @@ listing-header{
 
 /* Set a uniform size for all logos */
 .logo {
-  width: 100px; /* Adjusted width for uniformity */
-  height: auto;
+    width: 100px; /* Uniform width */
+    height: auto; /* Maintain aspect ratio */
+    padding: 0;
+    margin: 0;
+    float: left; /* Optional, depending on desired layout */
 }
+
 
 /* Mobile view: Show and switch logos */
 @media (max-width: 768px) {
   .partner-logos {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-  }
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
   .partner-logos li {
     flex: 0 0 50%; /* Each logo takes up 50% of the width */
     animation: slideMobile 10s linear infinite;
@@ -2834,8 +2849,14 @@ listing-header{
 @media (min-width: 769px) {
   .partner-logos {
     display: flex;
-    overflow: hidden;
-  }
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
   .partner-logos li {
     flex: 0 0 auto;
     animation: slideDesktop 10s linear infinite;
@@ -2854,11 +2875,15 @@ listing-header{
 /* Desktop view: Slider for logos */
 @media (min-width: 1024px) {
     .partner-logos {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
     .partner-logos li {
         flex: 0 0 auto;
         scroll-snap-align: start;
@@ -2869,9 +2894,15 @@ listing-header{
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .partner-logos {
-        /* Adjust logo size and spacing for mobile devices */
-        justify-content: space-around;
-    }
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
     .partner-logos li {
         /* Smaller logos on mobile */
         flex-basis: 45%; 
@@ -2883,7 +2914,7 @@ listing-header{
 .partner-logos li:hover {
     /* Hover effect for desktop users */
     transform: scale(1.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.7s ease;
 }
 
 /* Add slider control buttons */
