@@ -2801,3 +2801,138 @@ listing-header{
 	
 }
 
+
+/* Set a uniform size for all logos */
+.logo {
+  width: 100px; /* Adjusted width for uniformity */
+  height: auto;
+}
+
+/* Mobile view: Show and switch logos */
+@media (max-width: 768px) {
+  .partner-logos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+  .partner-logos li {
+    flex: 0 0 50%; /* Each logo takes up 50% of the width */
+    animation: slideMobile 10s linear infinite;
+  }
+
+  /* Keyframes for mobile logo switching */
+  @keyframes slideMobile {
+    0%, 20% { transform: translateX(0%); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+  }
+}
+
+/* Desktop view: Show and switch logos */
+@media (min-width: 769px) {
+  .partner-logos {
+    display: flex;
+    overflow: hidden;
+  }
+  .partner-logos li {
+    flex: 0 0 auto;
+    animation: slideDesktop 10s linear infinite;
+  }
+
+  /* Keyframes for the desktop logo switching */
+  @keyframes slideDesktop {
+    0%, 20% { transform: translateX(0%); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+  }
+}
+
+/* Desktop view: Slider for logos */
+@media (min-width: 1024px) {
+    .partner-logos {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .partner-logos li {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        margin-right: 10px;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .partner-logos {
+        /* Adjust logo size and spacing for mobile devices */
+        justify-content: space-around;
+    }
+    .partner-logos li {
+        /* Smaller logos on mobile */
+        flex-basis: 45%; 
+        margin-right: 5px;
+    }
+}
+
+/* Interactive elements */
+.partner-logos li:hover {
+    /* Hover effect for desktop users */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Add slider control buttons */
+/* Note: Actual functionality of these buttons would require JavaScript */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.slider-button.left {
+    left: 10px;
+}
+.slider-button.right {
+    right: 10px;
+}
+
+/* Responsive adjustments for text in hero slider on mobile devices */
+@media (max-width: 768px) {
+    .hero-slider .slider-rev-cont .tp-caption {
+        font-size: larger; /* Increase font size */
+        line-height: 1.4; /* Improve line height for readability */
+    }
+    .hero-slider .slider-rev-cont .tp-caption.h4, .hero-slider .slider-rev-cont .tp-caption.h2 {
+        font-size: 1.5em; /* Even larger font for headings */
+    }
+    .hero-slider .slider-rev-cont .tp-caption.para {
+        font-size: 1.2em; /* Slightly larger font for paragraph text */
+    }
+    .hero-slider .slider-rev-cont {
+        width: 90%; /* Adjust width to fit mobile screens */
+        margin: auto; /* Center the container */
+    }
+}
+
+/* Mobile view: Sticky header */
+@media (max-width: 768px) {
+    .header-class { /* Replace with actual header class or ID */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000; /* High z-index to keep it above other content */
+    }
+    .body-content { /* Replace with main content class or ID */
+        padding-top: 60px; /* Adjust based on header height to prevent content overlap */
+    }
+}
