@@ -4,7 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700);
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: inline-block;
 }
 body {
 	line-height: 1;
@@ -16,7 +16,6 @@ blockquote, q {
 	quotes: none;
 }
 blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
 	content: none;
 }
 table {
@@ -673,14 +672,14 @@ label {
 }
 .slides:after {
 	content: ".";
-	display: block;
+	display: inline-block;
 	clear: both;
 	visibility: hidden;
 	line-height: 0;
 	height: 0;
 } 
 html[xmlns] .slides {
-	display: block;
+	display: inline-block;
 } 
 * html .slides {
 	height: 1%;
@@ -1881,7 +1880,6 @@ body.boxed .is-sticky .full-width-menu{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
-	filter: url(desaturate.svg#greyscale);
 }
 .featured-projects h2{
 	color:#ffffff;
@@ -1947,6 +1945,7 @@ body.boxed .is-sticky .full-width-menu{
 
 .site-footer{
 	color:#8a8a8a;
+	width:100%;
 }
 .site-footer a{
 	color:#ccc;
