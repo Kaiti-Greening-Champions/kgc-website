@@ -1880,6 +1880,7 @@ body.boxed .is-sticky .full-width-menu{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
+	width: 100%;
 }
 .featured-projects h2{
 	color:#ffffff;
@@ -1912,7 +1913,6 @@ body.boxed .is-sticky .full-width-menu{
 }
 .project-overlay .project-cat{
 	display:inline-block;
-	float:right;
 	padding:0 10px;
 	text-align:center;
 	line-height:24px;
@@ -1958,7 +1958,39 @@ body.boxed .is-sticky .full-width-menu{
 	background-repeat: repeat-x;
 	background-color:#2f2f2f;
 	padding:40px 0;
+	width: 100%;
+	text-align: center;
 }
+
+.site-top-footer .container .row {
+    display: flex;
+    justify-content: center; /* Horizontally centers the flex items */
+    align-items: center; /* Vertically centers the flex items */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.site-top-footer .footer-widget {
+    flex: 0 0 100%; /* On smaller screens, widgets take full width */
+    max-width: 100%;
+    margin: 0 auto; /* Centers the widgets */
+    text-align: left; /* Aligns the text to the left within each widget */
+}
+
+@media screen and (min-width: 768px) {
+    .site-top-footer .footer-widget {
+        flex: 0 0 50%; /* On larger screens, widgets take up half the width */
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-top-footer .footer-widget {
+        flex: 0 0 33.33%; /* Each widget takes up one-third of the row */
+        max-width: 33.33%;
+    }
+}
+
+
 .site-bottom-footer{
 	background-color:#292929;
 	border-top:1px solid #252525;
