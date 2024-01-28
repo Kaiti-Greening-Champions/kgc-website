@@ -48,6 +48,45 @@
     }
 }
 
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .featured-image {
+        width: 100% !important; /* Makes the image width responsive */
+        height: auto !important; /* Adjusts the height automatically to maintain aspect ratio */
+        max-width: 340px; /* Optional: sets a max-width for the images */
+        margin: 0 auto; /* Centers the image */
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-caption {
+        font-size: 16px !important; 
+        line-height: 1.5 !important; 
+        text-align: center !important; 
+        text-align: center !important;
+        display: flex; /* Enables flexbox layout */
+        justify-content: center; /* Horizontally centers the content */
+        align-items: center; /* Vertically centers the content */
+    }
+
+    .tp-caption h2, .tp-caption h4 {
+        font-size: 18px !important;
+    }
+
+    .tp-caption.para {
+        font-size: 8px !important; /* Increased for better readability */
+        line-height: 1.4 !important; 
+        text-align: center !important;
+        padding: 0 15px; 
+    }
+    .tp-caption .btn {
+        font-size: 10px !important; /* Larger font size */
+        display: block; /* Make the button a block-level element */
+        margin: 20px auto 0; 
+}
+
+
 body {
     background-image: url(../images/patterns/pt9.png);
     background-repeat: repeat;
@@ -65,3 +104,5 @@ body {
     border: 1px solid black;
     float: left;
 }
+
+
