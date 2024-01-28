@@ -54,7 +54,6 @@
     .featured-image {
         width: 100% !important; /* Makes the image width responsive */
         height: auto !important; /* Adjusts the height automatically to maintain aspect ratio */
-        max-width: 340px; /* Optional: sets a max-width for the images */
         margin: 0 auto; /* Centers the image */
     }
 }
@@ -70,6 +69,13 @@
         align-items: center; /* Vertically centers the content */
     }
 
+    @media screen and (max-width: 768px) { /* Targeting mobile devices */
+        .col-sm-6 .media-box .post-thumb {
+            width: 100%; /* Makes the image width responsive */
+            height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+        }
+    }
+    
     .tp-caption h2, .tp-caption h4 {
         font-size: 18px !important;
     }
