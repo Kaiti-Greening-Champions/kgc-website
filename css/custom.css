@@ -92,6 +92,7 @@ body {
     background-repeat: repeat;
 }
 
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -104,5 +105,4 @@ body {
     border: 1px solid black;
     float: left;
 }
-
-
+}
