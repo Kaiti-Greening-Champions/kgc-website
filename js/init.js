@@ -442,10 +442,15 @@ $(".cart-module-trigger").click(function(e){
 $(".cart-module-opened").click(function(e){
 	e.stopPropagation();
 });
-$(document).click(function(){
- 	$('.search-module-opened, .cart-module-opened').hide();
-	e.preventDefault();
+$(document).click(function(e){
+    // Check if the clicked element is not part of the search or cart modules
+    if (!$(e.target).closest('.search-module-opened, .cart-module-opened').length) {
+        $('.search-module-opened, .cart-module-opened').hide();
+    }
+    // Optional: Prevent the default action if necessary
+    // e.preventDefault();
 });
+
 if($("body").hasClass("header-v2")){
 	var SHH = $(".site-header").height();
 } else if($("body").hasClass("header-v3")){
