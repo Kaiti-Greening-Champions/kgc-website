@@ -1,0 +1,33 @@
+/* Partners Section Styles */
+.partners-section {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Increase bottom margin for the heading */
+.container h2 {
+    margin-bottom: 40px; /* Increase this value to add more space */
+}
+
+/* Ensure logos are centered */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* This centers the logos horizontally */
+    gap: 20px;
+}
+
+.partner-img {
+    filter: grayscale(50%);
+    opacity: 0.8;
+    transition: opacity 0.3s, filter 0.3s;
+    max-height: 80px;
+    margin: 0 auto; /* Center logos within their flex item */
+}
+
+.partner-img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
