@@ -56,16 +56,19 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
     .partner-logo-container {
-        width: 80px; /* Smaller width container for logos on mobile */
+        width: 120px; /* Adjust the width to make the container larger on mobile */
     }
 
     .partner-img {
-        max-height: 60px; /* Smaller logos on mobile */
+        max-height: 100px; /* Increase the height of logos on mobile */
+        width: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center logos within their container */
     }
 
     /* Responsive heading styles for smaller devices */
     .container h2 {
         margin-bottom: 30px;
-        font-size: 1.25rem; /* Smaller font size for headings on mobile */
+        font-size: 1.25rem; /* Adjust if necessary to fit the design */
     }
 }
+
